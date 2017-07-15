@@ -12,6 +12,7 @@ var dns = require('./routes/dns');
 var rules = require('./routes/rules');
 var firewalls = require('./routes/firewalls');
 var vpn = require('./routes/vpn');
+var misc_stat = require('./routes/status');
 
 var app = express();
 
@@ -51,6 +52,7 @@ app.use('/dns', dns);
 app.use('/fw', firewalls);
 app.use('/vpn', vpn);
 app.use('/rules', rules);
+app.use('/status', misc_stat);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
