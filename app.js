@@ -52,7 +52,7 @@ app.use('/dns', dns);
 app.use('/fw', firewalls);
 app.use('/vpn', vpn);
 app.use('/rules', rules);
-app.use('/status', misc_stat);
+app.use('/misc_stat', misc_stat);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
