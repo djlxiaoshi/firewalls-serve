@@ -46,7 +46,7 @@ app.all('*', function(req, res, next) {
 
 
 app.use('/', index);
-app.use('/user', users);
+app.use('/users', users);
 app.use('/dhcp', dhcp);
 app.use('/dns', dns);
 app.use('/fw', firewalls);

@@ -78,4 +78,34 @@ router.get('/access/get_list', function(req, res, next) {
     });
 });
 
+router.get('/access/statistic', function(req, res, next) {
+    res.json({
+        code: 0,
+        msg: [
+            {country: 'Afghanistan', num: 28397.812},
+            {country: 'Angola', num: 19549.124},
+            {country: 'Albania', num: 3150.143},
+            {country: 'United Arab Emirates', num: 8441.537},
+            {country: 'Argentina', num: 40374.224},
+            {country: 'Armenia', num: 2963.496},
+            {country: 'French Southern and Antarctic Lands', num: 268.065},
+            {country: 'Australia', num: 22404.488},
+            {country: 'Austria', num: 8401.924},
+            {country: 'Azerbaijan', num: 9094.718},
+            {country: 'Burundi', num: 9232.753},
+            {country: 'Belgium', num: 10941.288},
+            {country: 'Benin', num: 9509.798},
+            {country: 'Burkina Faso', num: 15540.284},
+            {country: 'Bangladesh', num: 151125.475},
+            {country: 'Bulgaria', num: 7389.175},
+            {country: 'The Bahamas', num: 66402.316},
+            {country: 'Bosnia and Herzegovina', num: 3845.929},
+            {country: 'Belarus', num: 9491.07},
+            {country: 'Belize', num: 308.595},
+            {country: 'Bermuda', num: 64.951}
+        ]
+
+});
+});
+
 module.exports = router;
