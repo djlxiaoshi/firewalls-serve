@@ -6,11 +6,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var admin = require('./routes/admin');
 var dhcp = require('./routes/dhcp');
 var dns = require('./routes/dns');
 var rules = require('./routes/rules');
 var firewalls = require('./routes/firewalls');
+var userConfig = require('./routes/userConfig');
 var vpn = require('./routes/vpn');
 var misc_stat = require('./routes/status');
 
@@ -46,12 +47,13 @@ app.all('*', function(req, res, next) {
 
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/admin', admin);
 app.use('/dhcp', dhcp);
 app.use('/dns', dns);
 app.use('/fw', firewalls);
 app.use('/vpn', vpn);
 app.use('/rules', rules);
+app.use('/user', userConfig);
 app.use('/', misc_stat);
 
 // catch 404 and forward to error handler
