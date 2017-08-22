@@ -1,5 +1,6 @@
+'use strict'
 var express = require('express');
-const uuidV1 = require('uuid/v1');
+var uuidV1 = require('uuid/v1');
 var router = express.Router();
 
 router.get('/get_list', function(req, res, next) {
@@ -29,8 +30,7 @@ router.get('/get_list', function(req, res, next) {
 });
 
 router.get('/get_perms', function(req, res, next) {
-    let _uid = req.query.uid
-    console.log('用户UID', _uid)
+    var _uid = req.query.uid
     // todo 数据库查询
     res.json({
         msg: {
@@ -43,9 +43,8 @@ router.get('/get_perms', function(req, res, next) {
 });
 
 router.post('/add', function(req, res, next) {
-    let _name = req.body.name
-    let _perms = req.body.perms
-    console.log('添加用户', req.body)
+    var _name = req.body.name
+    var _perms = req.body.perms
     // todo 数据库查询
     res.json({
         msg: {
@@ -59,9 +58,9 @@ router.post('/add', function(req, res, next) {
 
 
 router.post('/modify', function(req, res, next) {
-    let _uid = req.body.uid
-    let _name = req.body.name
-    let _perms = req.body.perms
+    var _uid = req.body.uid
+    var _name = req.body.name
+    var _perms = req.body.perms
     console.log('用户权限', req.body)
     // todo 数据库修改
     res.json({
@@ -75,7 +74,7 @@ router.post('/modify', function(req, res, next) {
 });
 
 router.post('/delete', function(req, res, next) {
-    let _uid = req.body.uid
+    var _uid = req.body.uid
     // todo 数据库删除操作
     console.log('删除操作UID', _uid)
     res.json({
@@ -85,7 +84,7 @@ router.post('/delete', function(req, res, next) {
 });
 
 router.get('/download_key', function(req, res, next) {
-    let _uid = req.query.uid
+    var _uid = req.query.uid
     // todo 数据库删除操作
     console.log('删除操作UID', _uid)
     res.json({

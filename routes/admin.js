@@ -1,5 +1,5 @@
 var express = require('express');
-const uuidV1 = require('uuid/v1');
+var uuidV1 = require('uuid/v1');
 var router = express.Router();
 
 /* GET users listing. */
